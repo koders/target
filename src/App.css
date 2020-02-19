@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+.app {
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    display: flex;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.shoot-button {
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: #00cc00;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+    transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    line-height: 10px;
+    font-weight: 600;
+    outline: none;
+    padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.shoot-button:hover {
+    background: #00aa00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shoot-button.shooting {
+    background-color:red;
+}
+
+.target {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-image: url("target.jpg");
+    background-size: contain;
+    margin-bottom: 20px;
+}
+
+.shot {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("hole1.png");
+    background-size: contain;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table-container {
+    width: 300px;
+    height: 600px;
+    overflow: auto;
+    margin-right: 30px;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    text-align: center;
 }
